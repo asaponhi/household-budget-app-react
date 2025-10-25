@@ -25,8 +25,14 @@ interface SideBarProps {
   handleDrawerToggle: () => void;
 }
 
+interface NavItem {
+  path: string;
+  label: string;
+  icon: React.ElementType;
+}
+
 const SideBar = ({ drawerWidth, mobileOpen, handleDrawerToggle }: SideBarProps) => {
-  const navItems = [
+  const navItems: NavItem[] = [
     { path: '/', label: 'Dashboard', icon: DashboardIcon },
     { path: '/transactions', label: 'Transactions', icon: TransactionsIcon },
     { path: '/budget', label: 'Budget', icon: BudgetIcon },
