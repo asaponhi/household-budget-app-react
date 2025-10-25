@@ -1,23 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import Layout from './components/Layout/Layout';
+import Layout from './components/layout/Layout';
 import Dashboard from './pages/Dashboard';
 import Transactions from './pages/Transactions';
 import Budget from './pages/Budget';
 import Reports from './pages/Reports';
 import NoMatch from './pages/NoMatch';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#2c3e50',
-    },
-    secondary: {
-      main: '#3498db',
-    },
-  },
-});
+import theme from './components/theme/theme';
 
 function App() {
   return (
