@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard';
 import Transactions from './pages/Transactions';
 import Budget from './pages/Budget';
 import Reports from './pages/Reports';
+import NoMatch from './pages/NoMatch';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/transactions" element={<Transactions />} />
           <Route path="/budget" element={<Budget />} />
           <Route path="/reports" element={<Reports />} />
+          <Route path="*" element={<NoMatch />} />
         </Routes>
       </Layout>
     </Router>
