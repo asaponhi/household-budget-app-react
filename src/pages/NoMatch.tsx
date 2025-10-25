@@ -1,4 +1,3 @@
-import React from 'react';
 import './Page.css';
 
 const NoMatch = () => {
@@ -10,6 +9,3 @@ const NoMatch = () => {
 };
 
 export default NoMatch;
-
-
-

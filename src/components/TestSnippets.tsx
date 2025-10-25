@@ -8,14 +8,9 @@
 // imr + Tab = import React from 'react'
 
 // Example of what rafce + Tab creates:
-import React from 'react';
 
 const ComponentName = () => {
-  return (
-    <div>
-
-    </div>
-  );
+  return <div></div>;
 };
 
 export default ComponentName;
