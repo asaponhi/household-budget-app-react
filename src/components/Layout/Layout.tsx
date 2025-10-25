@@ -91,8 +91,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   );
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex', backgroundColor: (theme) => theme.palette.grey[100], minHeight: '100vh' }}>
       <CssBaseline />
+      {/* header */}
       <AppBar
         position="fixed"
         sx={{
@@ -116,10 +117,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </Toolbar>
       </AppBar>
 
+      {/* sidebar */}
       <Box
         component="nav"
         sx={{ width: { md: drawerWidth }, flexShrink: { md: 0 } }}
       >
+        {/* mobile drawer */}
         <Drawer
           variant="temporary"
           open={mobileOpen}
@@ -137,6 +140,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         >
           {drawer}
         </Drawer>
+
+        {/* desktop drawer */}
         <Drawer
           variant="permanent"
           sx={{
@@ -152,6 +157,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </Drawer>
       </Box>
 
+      {/* main content */}
       <Box
         component="main"
         sx={{
